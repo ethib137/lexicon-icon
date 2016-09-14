@@ -1,0 +1,15 @@
+{namespace Lexicon_Icon}
+
+/**
+ * This renders an icon element based on the lexicon icon definition
+ * found at http://liferay.github.io/lexicon/content/icons-lexicon/
+ *
+ * @param? cssClass
+ * @param sprite
+ * @param symbol
+ */
+{template .render}
+	<svg class="lexicon-icon{$cssClass ? ' ' + $cssClass : ''}">
+		<use xlink:href="{$sprite}#{$symbol}" />
+	</svg>
+{/template}
