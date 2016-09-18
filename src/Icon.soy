@@ -9,7 +9,7 @@
  * @param symbol
  */
 {template .render}
-	<svg class="lexicon-icon{$cssClass ? ' ' + $cssClass : ''}">
+	<svg aria-hidden="true" class="lexicon-icon{$cssClass ? ' ' + $cssClass : ''}">
 		<use xlink:href="{$sprite}#{$symbol}" />
 	</svg>
 {/template}
