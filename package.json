@@ -8,8 +8,8 @@
     "node": ">=0.12.0",
     "npm": ">=3.0.0"
   },
-  "main": "lib/Icon.js",
-  "jsnext:main": "src/Icon.js",
+  "main": "lib/LexiconIcon.js",
+  "jsnext:main": "src/LexiconIcon.js",
   "files": [
     "lib",
     "src",
