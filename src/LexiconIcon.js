@@ -9,7 +9,8 @@ import templates from './LexiconIcon.soy';
  *
  * @see  {@link http://liferay.github.io/lexicon/content/icons-lexicon/|Lexicon Definition}
  */
-class LexiconIcon extends Component {}
+class LexiconIcon extends Component {
+}
 
 /**
  * State definition.
@@ -26,10 +27,10 @@ LexiconIcon.STATE = {
 	},
 
 	/**
-	 * Path to the hosted lexicon icons.svg file with the icons
+	 * Path to the spritemap file with the icons
 	 * @type {string}
 	 */
-	sprite: {
+	spritemap: {
 		validator: core.isString
 	},
 

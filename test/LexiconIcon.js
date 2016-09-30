@@ -11,10 +11,10 @@ describe('LexiconIcon', function() {
 		}
 	});
 
-	it('should generate the default sprite#symbol markup defined by Lexicon', function() {
+	it('should generate the default spritemap#symbol markup defined by Lexicon', function() {
 		icon = new LexiconIcon(
 			{
-				sprite: 'foo',
+				spritemap: 'foo',
 				symbol: 'bar'
 			}
 		);
@@ -26,7 +26,7 @@ describe('LexiconIcon', function() {
 		icon = new LexiconIcon(
 			{
 				cssClass: 'css-class',
-				sprite: 'foo',
+				spritemap: 'foo',
 				symbol: 'bar'
 			}
 		);
