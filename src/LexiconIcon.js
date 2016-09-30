@@ -14,12 +14,16 @@ class LexiconIcon extends Component {
 
 /**
  * State definition.
- * @type {!Object}
+ * @ignore
  * @static
+ * @type {!Object}
  */
 LexiconIcon.STATE = {
 	/**
 	 * CSS class (or list of classes) for styling the icon's main container
+	 * @default undefined
+	 * @instance
+	 * @memberof LexiconIcon
 	 * @type {string}
 	 */
 	cssClass: {
@@ -28,6 +32,9 @@ LexiconIcon.STATE = {
 
 	/**
 	 * Path to the spritemap file with the icons
+	 * @default undefined
+	 * @instance
+	 * @memberof LexiconIcon
 	 * @type {string}
 	 */
 	spritemap: {
@@ -36,6 +43,9 @@ LexiconIcon.STATE = {
 
 	/**
 	 * Id of the icon to show from the list of available icons
+	 * @default undefined
+	 * @instance
+	 * @memberof LexiconIcon
 	 * @type {string}
 	 */
 	symbol: {
