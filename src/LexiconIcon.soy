@@ -4,12 +4,12 @@
  * This renders an icon element based on the lexicon icon definition
  * found at http://liferay.github.io/lexicon/content/icons-lexicon/
  *
- * @param? cssClass
+ * @param? elementClasses
  * @param spritemap
  * @param symbol
  */
 {template .render}
-	<svg aria-hidden="true" class="lexicon-icon{$cssClass ? ' ' + $cssClass : ''}">
+	<svg aria-hidden="true" class="lexicon-icon{$elementClasses ? ' ' + $elementClasses : ''}">
 		<use xlink:href="{$spritemap}#{$symbol}" />
 	</svg>
 {/template}

@@ -20,17 +20,6 @@ class LexiconIcon extends Component {
  */
 LexiconIcon.STATE = {
 	/**
-	 * CSS class (or list of classes) for styling the icon's main container
-	 * @default undefined
-	 * @instance
-	 * @memberof LexiconIcon
-	 * @type {string}
-	 */
-	cssClass: {
-		validator: core.isString
-	},
-
-	/**
 	 * Path to the spritemap file with the icons
 	 * @default undefined
 	 * @instance

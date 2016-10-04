@@ -22,15 +22,15 @@ describe('LexiconIcon', function() {
 		assert.strictEqual(icon.element.outerHTML, __html__['test/fixture/testDefaultLexiconIcon.html']);
 	});
 
-	it('should append a cssClass to the outer element', function() {
+	it('should append elementClasses to the outer element', function() {
 		icon = new LexiconIcon(
 			{
-				cssClass: 'css-class',
+				elementClasses: 'css-class',
 				spritemap: 'foo',
 				symbol: 'bar'
 			}
 		);
 
-		assert.strictEqual(icon.element.outerHTML, __html__['test/fixture/testCssClassLexiconIcon.html']);
+		assert.strictEqual(icon.element.outerHTML, __html__['test/fixture/testElementClassesLexiconIcon.html']);
 	});
 });
