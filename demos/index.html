@@ -15,24 +15,20 @@
 			#flagsList li, #iconsList li {
 				float: left;
 				padding: 10px;
-				width: 5%;
-			}
-
-			#flagsList li:first-child, #iconsList li:first-child {
-				display: none;
 			}
 		</style>
 	</head>
 	<body>
 		<h1>Lexicon Icon Component</h1>
+
 		<h2>Icons</h2>
 		<ul class="clearfix lexicon-icon-list list-unstyled" id="iconsList">
-			<li id="iconTemplate"><svg></svg></li>
+			<li class="icon-template"></li>
 		</ul>
 
 		<h2>Flags</h2>
 		<ul class="clearfix lexicon-icon-list list-unstyled" id="flagsList">
-			<li id="flagTemplate"><svg></svg></li>
+			<li class="flag-template"></li>
 		</ul>
 
 		<script type="text/javascript">
@@ -41,34 +37,39 @@
 
 			var spritemap = '../node_modules/lexicon-ux/build/images/icons/icons.svg';
 
-			var iconsList = document.querySelector('#iconsList');
-			var iconTemplate = document.querySelector('#iconTemplate');
 			var flagsList = document.querySelector('#flagsList');
-			var flagTemplate = document.querySelector('#flagTemplate');
+			var iconsList = document.querySelector('#iconsList');
+
+			var flagTemplate = flagsList.querySelector('.flag-template');
+			var iconTemplate = iconsList.querySelector('.icon-template');
 
 			icons.forEach(function(icon) {
 				var iconListItem = iconTemplate.cloneNode(true);
+
 				iconsList.appendChild(iconListItem);
 
 				new metal.LexiconIcon({
 					elementClasses: 'icon-monospaced',
-					element: iconListItem.querySelector('svg'),
 					spritemap: spritemap,
 					symbol: icon
-				});
+				}, iconListItem);
 			});
+
+			iconTemplate.parentNode.removeChild(iconTemplate);
 
 			flags.forEach(function(flag) {
 				var flagListItem = flagTemplate.cloneNode(true);
+
 				flagsList.appendChild(flagListItem);
 
 				new metal.LexiconIcon({
 					elementClasses: 'icon-monospaced',
-					element: flagListItem.querySelector('svg'),
 					spritemap: spritemap,
 					symbol: flag
-				});
+				}, flagListItem);
 			});
+
+			flagTemplate.parentNode.removeChild(flagTemplate);
 		</script>
 	</body>
 </html>
